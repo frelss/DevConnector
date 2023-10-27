@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+
+const { Schema } = mongoose;
 
 const PostSchema = new Schema({
   user: {
@@ -27,7 +28,7 @@ const PostSchema = new Schema({
   comments: [
     {
       user: {
-        type: use.Schema.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "users",
       },
       text: {
